@@ -1,0 +1,12 @@
+#!/bin/bash
+
+script="kibana_screenshot.js"
+url=http://yasuhisa-no-mac-mini.local:5601/#/dashboard/Printable-Dashboard\?_g\=\(time:\(from:now-20d,mode:quick,to:now\)\)
+date=`date +%Y-%m-%d-%H-%M`
+output_filename="${date}_kibana.pdf"
+size="A4"
+zoom="1.0"
+
+/usr/local/Cellar/phantomjs/2.0.0/bin/phantomjs $script $url $output_filename $size $zoom
+
+send2kindle.rb $output_filename $output_filename
