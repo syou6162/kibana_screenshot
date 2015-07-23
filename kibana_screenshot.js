@@ -2,7 +2,7 @@ var page = require('webpage').create(),
     system = require('system'),
     address, output, size;
 //How to to wait for kibana to load and the data from elasticseatch in milliseconds.
-var waitTime = 20 * 1000;
+var waitTime = 60 * 1000;
 
 if (system.args.length < 3 || system.args.length > 5) {
     console.log('Usage: rasterize.js URL filename [paperwidth*paperheight|paperformat] [zoom]');
