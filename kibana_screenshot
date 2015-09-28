@@ -5,7 +5,7 @@ url=http://yasuhisa-no-mac-mini.local:5601/#/dashboard/Printable-Dashboard\?_g\=
 date=`date +%Y-%m-%d-%H-%M`
 output_filename="${date}_kibana.pdf"
 size="A4"
-zoom="1.0"
+zoom="1.3"
 
 /usr/local/Cellar/phantomjs/2.0.0/bin/phantomjs $script $url $output_filename $size $zoom
 
